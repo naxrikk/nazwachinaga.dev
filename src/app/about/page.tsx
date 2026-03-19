@@ -19,7 +19,7 @@ export default function HomePage() {
             View Portfolio
           </Link>
           <Link href="/about" className="px-6 py-3 border border-blue-700 text-blue-700 rounded-xl font-medium hover:bg-blue-50 transition-colors">
-            About me
+            About Me
           </Link>
         </div>
       </section>
