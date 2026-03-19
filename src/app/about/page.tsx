@@ -1,80 +1,94 @@
-import Link from "next/link";
-import { projects, blogPosts, skills } from "@/data";
+import { skills } from "@/data";
 
-export default function HomePage() {
+export default function AboutPage() {
   return (
-    <div className="space-y-16">
-      <section className="py-16 text-center">
-        <div className="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl">
+    <div className="space-y-12">
+      {/* Header */}
+      <section className="text-center py-10">
+        <div className="w-28 h-28 bg-blue-100 rounded-full mx-auto mb-6 flex items-center justify-center text-5xl">
           👩‍💻
         </div>
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">
-          Hi, I&apos;m <span className="text-blue-700">Nazwa Chinaga</span> 👋
+        <h1 className="text-3xl font-bold text-gray-800 mb-3">
+          Nazwa Sri Febiani Sinaga
         </h1>
-        <p className="text-lg text-gray-500 max-w-xl mx-auto mb-8">
-          Frontend Developer & UI/UX Enthusiast. Suka bikin hal-hal yang keren di web!
+        <p className="text-blue-600 font-medium mb-4">
+          Frontend Developer & UI/UX Enthusiast
         </p>
-        <div className="flex gap-4 justify-center">
-          <Link href="/portfolio" className="px-6 py-3 bg-blue-700 text-white rounded-xl font-medium hover:bg-blue-800 transition-colors">
-            View Portfolio
-          </Link>
-          <Link href="/about" className="px-6 py-3 border border-blue-700 text-blue-700 rounded-xl font-medium hover:bg-blue-50 transition-colors">
-            About Me
-          </Link>
+        <p className="text-gray-500 max-w-xl mx-auto">
+          Mahasiswa yang passionate di bidang web development dan UI/UX design.
+          Suka belajar hal baru dan membuat aplikasi yang bermanfaat!
+        </p>
+      </section>
+
+      {/* About Me */}
+      <section className="bg-white border border-gray-200 rounded-xl p-8">
+        <h2 className="text-xl font-bold text-gray-800 mb-4">About Me</h2>
+        <div className="space-y-3 text-gray-600 leading-relaxed">
+          <p>
+            Halo! Saya Nazwa Chinaga, seorang mahasiswa yang sedang mendalami dunia
+            web development. Perjalanan saya dimulai dari belajar HTML dan CSS
+            dasar, hingga sekarang sudah bisa membuat aplikasi dengan Next.js
+            dan TypeScript.
+          </p>
+          <p>
+            Selain coding, saya juga tertarik dengan UI/UX design. Saya percaya
+            bahwa tampilan yang baik dan pengalaman pengguna yang menyenangkan
+            sama pentingnya dengan kode yang bersih.
+          </p>
+          <p>
+            Saat ini saya sedang aktif belajar dan mengerjakan berbagai project
+            untuk mengembangkan skill saya. Mari berkolaborasi! 🚀
+          </p>
         </div>
       </section>
 
-      <section>
-        <h2 className="text-2xl font-bold text-gray-800 mb-6">Skills</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      {/* Skills Section */}
+      <section className="bg-white border border-gray-200 rounded-xl p-8">
+        <h2 className="text-xl font-bold text-gray-800 mb-6">Skills</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {skills.map((skill) => (
-            <div key={skill.name} className="bg-white border border-gray-200 rounded-xl p-4">
+            <div key={skill.name}>
               <div className="flex justify-between mb-2">
                 <span className="text-sm font-medium text-gray-700">{skill.name}</span>
                 <span className="text-sm text-blue-600">{skill.level}%</span>
               </div>
               <div className="w-full bg-gray-100 rounded-full h-2">
-                <div className="bg-blue-600 h-2 rounded-full" style={{ width: `${skill.level}%` }} />
+                <div 
+                  className="bg-blue-600 h-2 rounded-full" 
+                  style={{ width: `${skill.level}%` }} 
+                />
               </div>
+              <span className="text-xs text-gray-400 mt-1 block">
+                {skill.category}
+              </span>
             </div>
           ))}
         </div>
       </section>
 
-      <section>
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-800">Recent Projects</h2>
-          <Link href="/portfolio" className="text-sm text-blue-600 hover:underline">Lihat semua →</Link>
-        </div>
-        <div className="grid md:grid-cols-2 gap-4">
-          {projects.slice(0, 2).map((project) => (
-            <div key={project.id} className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-all">
-              <h3 className="font-semibold text-gray-800 mb-2">{project.title}</h3>
-              <p className="text-sm text-gray-500 mb-3">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map((t) => (
-                  <span key={t} className="text-xs px-2 py-1 bg-blue-50 text-blue-700 rounded-full">{t}</span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-800">Recent Posts</h2>
-          <Link href="/blog" className="text-sm text-blue-600 hover:underline">Lihat semua →</Link>
-        </div>
-        <div className="grid gap-4">
-          {blogPosts.slice(0, 2).map((post) => (
-            <div key={post.id} className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-all">
-              <span className="text-xs px-2 py-1 bg-blue-50 text-blue-700 rounded-full mb-3 inline-block">{post.category}</span>
-              <h3 className="font-semibold text-gray-800 mb-2">{post.title}</h3>
-              <p className="text-sm text-gray-500">{post.excerpt}</p>
-              <p className="text-xs text-gray-400 mt-2">📅 {post.date}</p>
-            </div>
-          ))}
+      {/* Contact Section */}
+      <section className="bg-blue-50 border border-blue-100 rounded-xl p-8 text-center">
+        <h2 className="text-xl font-bold text-gray-800 mb-3">
+          Let's Connect! 👋
+        </h2>
+        <p className="text-gray-500 mb-6">
+          Punya project seru atau mau ngobrol soal tech? Hubungi aku!
+        </p>
+        <div className="flex gap-4 justify-center">
+          <a 
+            href="https://github.com/naxrikk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2 bg-gray-800 text-white rounded-lg text-sm hover:bg-gray-700 transition-colors"
+          >
+            GitHub
+          </a>
+          <a 
+            href="mailto:sinaganazwa32@gmail.com"
+            className="px-5 py-2 bg-blue-700 text-white rounded-lg text-sm hover:bg-blue-800 transition-colors"
+          >
+            Email Aku
+          </a>
         </div>
       </section>
     </div>
