@@ -9,7 +9,7 @@ export default function AboutPage() {
           👩‍💻
         </div>
         <h1 className="text-3xl font-bold text-gray-800 mb-3">
-          Nazwa Sri Febiani Sinaga
+          Nazwa Chinaga
         </h1>
         <p className="text-blue-600 font-medium mb-4">
           Frontend Developer & UI/UX Enthusiast
@@ -25,7 +25,7 @@ export default function AboutPage() {
         <h2 className="text-xl font-bold text-gray-800 mb-4">About Me</h2>
         <div className="space-y-3 text-gray-600 leading-relaxed">
           <p>
-            Halo! Saya Nazwa Chinaga, seorang mahasiswa yang sedang mendalami dunia
+            Halo! Saya Nazwa Sri Febiani Sinaga, seorang mahasiswa yang sedang mendalami dunia
             web development. Perjalanan saya dimulai dari belajar HTML dan CSS
             dasar, hingga sekarang sudah bisa membuat aplikasi dengan Next.js
             dan TypeScript.
