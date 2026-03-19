@@ -44,7 +44,7 @@ export default function HomePage() {
       <section>
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold text-gray-800">Recent Projects</h2>
-          <Link href="/portfolio" className="text-sm text-blue-600 hover:underline">Lihat semua</Link>
+          <Link href="/portfolio" className="text-sm text-blue-600 hover:underline">Lihat semua →</Link>
         </div>
         <div className="grid md:grid-cols-2 gap-4">
           {projects.slice(0, 2).map((project) => (
@@ -64,7 +64,7 @@ export default function HomePage() {
       <section>
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold text-gray-800">Recent Posts</h2>
-          <Link href="/blog" className="text-sm text-blue-600 hover:underline">Lihat semua</Link>
+          <Link href="/blog" className="text-sm text-blue-600 hover:underline">Lihat semua →</Link>
         </div>
         <div className="grid gap-4">
           {blogPosts.slice(0, 2).map((post) => (
