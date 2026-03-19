@@ -16,10 +16,10 @@ export default function HomePage() {
         </p>
         <div className="flex gap-4 justify-center">
           <Link href="/portfolio" className="px-6 py-3 bg-blue-700 text-white rounded-xl font-medium hover:bg-blue-800 transition-colors">
-            Lihat Portfolio
+            View Portfolio
           </Link>
           <Link href="/about" className="px-6 py-3 border border-blue-700 text-blue-700 rounded-xl font-medium hover:bg-blue-50 transition-colors">
-            Tentang Aku
+            About me
           </Link>
         </div>
       </section>

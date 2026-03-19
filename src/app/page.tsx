@@ -9,17 +9,17 @@ export default function HomePage() {
           👩‍💻
         </div>
         <h1 className="text-4xl font-bold text-gray-800 mb-4">
-          Hi, I&apos;m <span className="text-blue-700">Nazwa</span> 👋
+          Hi, I&apos;m <span className="text-blue-700">Nazwa Chinaga</span> 👋
         </h1>
         <p className="text-lg text-gray-500 max-w-xl mx-auto mb-8">
           Frontend Developer & UI/UX Enthusiast. Suka bikin hal-hal yang keren di web!
         </p>
         <div className="flex gap-4 justify-center">
           <Link href="/portfolio" className="px-6 py-3 bg-blue-700 text-white rounded-xl font-medium hover:bg-blue-800 transition-colors">
-            Lihat Portfolio
+            View Portfolio
           </Link>
           <Link href="/about" className="px-6 py-3 border border-blue-700 text-blue-700 rounded-xl font-medium hover:bg-blue-50 transition-colors">
-            Tentang Aku
+            About Me
           </Link>
         </div>
       </section>
