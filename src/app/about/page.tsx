@@ -9,7 +9,7 @@ export default function HomePage() {
           👩‍💻
         </div>
         <h1 className="text-4xl font-bold text-gray-800 mb-4">
-          Hi, I&apos;m <span className="text-blue-700">Nazwa</span> 👋
+          Hi, I&apos;m <span className="text-blue-700">Nazwa Chinaga</span> 👋
         </h1>
         <p className="text-lg text-gray-500 max-w-xl mx-auto mb-8">
           Frontend Developer & UI/UX Enthusiast. Suka bikin hal-hal yang keren di web!
